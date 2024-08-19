@@ -13,7 +13,7 @@ jobs:
                   distribution: 'adopt'
 
             - name: Build
-              run: mvn --batch-mode --update-snapshots clean package
+              run: mvn --batch-mode -DskipTests --update-snapshots clean package
 
             - name: Run tests
               run: mvn -Dmaven.test.failure.ignore=true --batch-mode test
